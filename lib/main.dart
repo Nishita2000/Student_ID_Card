@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-//stateful-dynamic(value change hoy)UI render korte hoile.
-// Stateless e terminal e change hobe. But screen rendered hobe na. Reload korar por value show korbe.
-
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        //starts with MaterialApp widget.customizabe.wont be covered here.
+        //starts with MaterialApp widget.customizable.wont be covered here.
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -36,12 +33,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
